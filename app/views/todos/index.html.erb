@@ -1,5 +1,5 @@
 <h1>this is the todo's list </h1>
-<p> the data today is <%= DateTime.now.to_s(:long) %> </p>
+<p> the date today is <%= DateTime.now.to_s(:long) %> </p>
 <h3> there are total of <%= Todo.count %> todos in our database</h3>
 <% Todo.all.each do |todo|%>
 <div style = "display:flex; align-items:center;">
