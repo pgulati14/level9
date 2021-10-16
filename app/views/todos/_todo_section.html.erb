@@ -7,11 +7,11 @@
         <% Todo.all.each do |todo| %>
           <li class="TodoItem">
             <label class="TodoItem-container">
-              <% if todos.completed%>
+              <% if todo.completed%>
                 <input class="TodoItem-checkbox" type=checkbox checked>
                 <label><%= todo.todo_text %></label>
               <%end%>
-              <% if !todos.completed%>
+              <% if !todo.completed%>
                 <input class="TodoItem-checkbox" type=checkbox>
                 <label><%= todo.todo_text %></label>
               <%end%>
