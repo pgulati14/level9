@@ -129,3 +129,6 @@ cursor: pointer;
 
    visibility: visible;
 }
+.TodoItem-completedstrike{
+  text-decoration: line-through;
+}
