@@ -8,11 +8,11 @@
           <li class="TodoItem">
             <label class="TodoItem-container">
               <% if todos.completed%>
-                <input class="TodoItem-checkbox" type=checkbox>
+                <input class="TodoItem-checkbox" type=checkbox checked>
                 <label><%= todo.todo_text %></label>
               <%end%>
               <% if !todos.completed%>
-                <input class="TodoItem-checkbox" type=checkbox checked>
+                <input class="TodoItem-checkbox" type=checkbox>
                 <label><%= todo.todo_text %></label>
               <%end%>
               <% if show_due_date %>
