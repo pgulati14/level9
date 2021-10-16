@@ -5,6 +5,7 @@
         </div>
         <ul>
         <% Todo.all.each do |todo| %>
+          <% if (!todo.completed && section_title=="Overdue")|| (section_title!="Overdue") %>
           <li class="TodoItem">
             <label class="TodoItem-container">
               <% if todo.completed && section_title!="Overdue"%>
@@ -17,13 +18,13 @@
               <%end%>
               <% if show_due_date && (!todo.completed && section_title=="Overdue") || (section_title!="Overdue")%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
-
-              <a class="TodoItem-delete" href="javascript:void(0)">
+                 <a class="TodoItem-delete" href="javascript:void(0)">
                 <img src="./trash-can-outline.svg"><img>
               </a>
              <%end%>
             </label>
           </li>
+          <% end %>
         <% end %>
         </ul>
       </section>
