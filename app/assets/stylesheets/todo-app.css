@@ -129,6 +129,8 @@ cursor: pointer;
 
    visibility: visible;
 }
-.TodoItem-completedstrike{
+
+input[type=checkbox]:checked + label {
+
   text-decoration: line-through;
 }
