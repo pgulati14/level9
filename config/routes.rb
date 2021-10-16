@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/" => "home#index"
   resources :users
@@ -10,4 +11,10 @@ Rails.application.routes.draw do
   #post "users/login", to: "users#login"
   #resources :todos
   #resources :users
+=======
+ get "/" => "home#index"
+
+ resources :todos
+ resources :users
+>>>>>>> main
 end
