@@ -16,7 +16,7 @@
                 <input class="TodoItem-checkbox" type=checkbox>
                 <label><%= todo.todo_text %></label>
               <%end%>
-              <% if (show_due_date && section_title!="Due Today") && (!todo.completed && section_title=="Overdue") || (section_title!="Overdue")%>
+              <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
                  <a class="TodoItem-delete" href="javascript:void(0)">
                 <img src="./trash-can-outline.svg"><img>
