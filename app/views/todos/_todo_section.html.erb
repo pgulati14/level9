@@ -4,7 +4,7 @@
           <p class="todoSectionTitle-remaining"><%= todo.completed.count %>/<%=todo.count %></p>
         </div>
         <ul>
-        <% Todo.all.each do |todo| %>
+        <% todos.all.each do |todo| %>
           <% if (!todo.completed && section_title=="Overdue")|| (section_title!="Overdue") %>
           <li class="TodoItem">
             <label class="TodoItem-container">
