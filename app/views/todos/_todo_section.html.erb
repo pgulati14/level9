@@ -5,10 +5,12 @@
         </div>
         <ul>
         <% todos.each do |todo| %>
-
           <li class="TodoItem">
             <label class="TodoItem-container">
-
+              <% if (todos.completed)%>
+                 <input class="TodoItem-checkbox" type=checkbox checked>
+                 <p class="TodoItem-completedstrike"></p>
+              <%end%>
 
               <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
@@ -17,8 +19,8 @@
                  <img src="./trash-can-outline.svg"><img>
                  </a>
             </label>
+          <%end%>
           </li>
-          <% end %>
-        <% end %>
+
         </ul>
-      </section>
+  </section>
