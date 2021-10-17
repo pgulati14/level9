@@ -1,7 +1,7 @@
 <section class="TodoSection">
         <div class="TodoSection-title">
           <p class="TodoSectionTitle-text"><%= section_title %></h2>
-          <p class="todoSectionTitle-remaining"><%= todo.completed.count %>/<%=todo.count %></p>
+          <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%=todos.count %></p>
         </div>
         <ul>
         <% todos.all.each do |todo| %>
