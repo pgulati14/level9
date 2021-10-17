@@ -1,7 +1,7 @@
 <section class="TodoSection">
         <div class="TodoSection-title">
           <p class="TodoSectionTitle-text"><%= section_title %></h2>
-          <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%=todos.count %></p>
+          <p class="todoSectionTitle-remaining"><%= todo.completed.count %>/<%=todo.count %></p>
         </div>
         <ul>
         <% Todo.all.each do |todo| %>
@@ -18,7 +18,7 @@
               <%end%>
               <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
-             <%end%>
+              <%end%>
                  <a class="TodoItem-delete" href="javascript:void(0)">
                  <img src="./trash-can-outline.svg"><img>
                  </a>
