@@ -130,7 +130,6 @@ cursor: pointer;
    visibility: visible;
 }
 
-input[type=checkbox]:checked + label {
-
+.TodoItem-completestrike{
   text-decoration: line-through;
 }

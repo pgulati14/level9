@@ -4,18 +4,12 @@
           <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%=todos.count %></p>
         </div>
         <ul>
-        <% todos.all.each do |todo| %>
-          <% if (!todo.completed && section_title=="Overdue")|| (section_title!="Overdue") %>
+        <% todos.each do |todo| %>
+
           <li class="TodoItem">
             <label class="TodoItem-container">
-              <% if todo.completed && section_title!="Overdue"%>
-                <input class="TodoItem-checkbox" type=checkbox checked>
-                <label><%= todo.todo_text %></label>
-              <%end%>
-              <% if !todo.completed%>
-                <input class="TodoItem-checkbox" type=checkbox>
-                <label><%= todo.todo_text %></label>
-              <%end%>
+
+
               <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
               <%end%>
