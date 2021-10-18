@@ -5,10 +5,10 @@
         </div>
         <ul>
         <% todos.each do |todo| %>
-          <label> <%=todo.todo_text%>
+
           <li class="TodoItem">
             <label class="TodoItem-container">
-
+              <label> <%=todo.todo_text%>
               <% if (todos.completed)%>
                  <input class="TodoItem-checkbox" type=checkbox checked>
                  <p class="TodoItem-completedstrike"></p>
