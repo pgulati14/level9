@@ -17,7 +17,7 @@
               <% end %>
               <% if todo.completed%>
                  <p class="TodoItem-completestrike"> <%= todo.todo_text %></p>
-
+              <% end %>
               <%if show_due_date%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
               <%end%>
