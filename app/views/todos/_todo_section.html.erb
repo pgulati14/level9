@@ -12,11 +12,10 @@
               <% if (todo.completed)%>
                  <input class="TodoItem-checkbox" type=checkbox checked>
                  <p class="TodoItem-completestrike"> <%= todo.todo_text %></p>
-              <%end%>
+
                <% else%>
               <p><%= todo.todo_text %> </p>
-               <% end %>
-
+              <%end%>
               <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
               <%end%>
