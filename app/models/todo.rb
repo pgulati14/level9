@@ -1,5 +1,5 @@
 class Todo < ActiveRecord::Base
-  belongs_to :user
+  #belongs_to :user
 
   def to_pleasent_string
     is_completed = completed ? "[X]" : "[ ]"
@@ -17,7 +17,7 @@ class Todo < ActiveRecord::Base
     all.where("due_date = ?", Date.today)
   end
   def self.overdue
-    where("due_date < ? and  ( completed)", Date.today)
+    where("due_date < ? and  ( not completed)", Date.today)
     #all.where("due_date < ? and completed= ?", Date.today, false)
   end
 
