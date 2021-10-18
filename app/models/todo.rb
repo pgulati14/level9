@@ -25,7 +25,6 @@ class Todo < ActiveRecord::Base
     all.where("due_date > ?", Date.today)
   end
 
-
   def self.show_list
     puts "My Todo-List\n\n"
     puts "Overdue\n"
