@@ -11,6 +11,10 @@
               <input class="TodoItem-checkbox" type=checkbox checked>
               <label><%= todo.todo_text %></label>
               <%end%>
+              <% if !todo.completed%>
+              <input class="TodoItem-checkbox" type=checkbox>
+              <label><%= todo.todo_text %></label>
+              <%end%>
 
               <% if todo.completed%>
                  <p class="TodoItem-completestrike"> <%= todo.todo_text %></p>
