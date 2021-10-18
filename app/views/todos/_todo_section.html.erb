@@ -4,7 +4,7 @@
           <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%=todos.count %></p>
         </div>
         <ul>
-        <% Todos.each do |todo| %>
+        <% todos.each do |todo| %>
           <li class="TodoItem">
             <label class="TodoItem-container">
               <% if todo.completed%>
