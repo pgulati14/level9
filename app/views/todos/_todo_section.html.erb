@@ -8,13 +8,12 @@
 
           <li class="TodoItem">
             <label class="TodoItem-container">
-
+              <%<input class="TodoItem-checkbox" name="completed" type="checkbox" <%= todo.completed ? "checked" : "" %>
               <% if (todo.completed)%>
-                 <input class="TodoItem-checkbox" type=checkbox checked>
-                 <p class="TodoItem-completestrike"> <%= todo.todo_text %></p>
 
-               <% else%>
-              <p><%= todo.todo_text %> </p>
+                 <p class="TodoItem-completestrike"> <%= todo.todo_text %></p>
+                <% else%>
+                 <p><%= todo.todo_text %> </p>
               <%end%>
               <% if (show_due_date)%>
                  <p class="TodoItem-dueDate"><%= todo.due_date.to_s(:short)%></p>
