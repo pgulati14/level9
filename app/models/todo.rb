@@ -1,5 +1,5 @@
 class Todo < ActiveRecord::Base
-  belongs_to :user
+  #belongs_to :user
 
   def to_pleasent_string
     is_completed = completed ? "[X]" : "[ ]"
