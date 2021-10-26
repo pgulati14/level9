@@ -8,12 +8,7 @@
           <li class="TodoItem">
             <label class="TodoItem-container">
                 <%= form_with(url: "/todos/#{todo.id}", method: "PUT") do %>
-                 <input
-                    class="TodoItem-Checkbox"
-                    name="completed"
-                    type="checkbox" <%= todo.completed ? "checked" : "" %>
-                    onclick = "this.form.submit()"
-                  />
+                <%= check_box_tag "completed", nil, todo.completed, class: "TodoItem-checkbox", onclick: "this.form.submit()" %>
                 <% end %>
 
               <span class="<%= todo.completed ? "TodoItem-completestrike" : "" %>">
@@ -28,7 +23,7 @@
 
               <a class="TodoItem-delete" href="javascript:void(0)">
                 <%= form_with(url: "/todos/#{todo.id}", method: "DELETE") do %>
-                  <input type='image' src="./trash-can-outline.svg">
+                  <%= image_submit_tag "trash-can-outline.svg" %>
                 <% end %>
               </a>
             </label>

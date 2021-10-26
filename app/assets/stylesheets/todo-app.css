@@ -125,7 +125,7 @@ cursor: pointer;
 }
 
 
-.TodoItem-container:hover .TodoItem-delete img{
+.TodoItem-container:hover .TodoItem-delete img {
 
    visibility: visible;
 }
