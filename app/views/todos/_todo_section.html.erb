@@ -1,14 +1,17 @@
 <section class="TodoSection">
         <div class="TodoSection-title">
           <p class="TodoSectionTitle-text"><%= section_title %></h2>
-          <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%= todos.count %></p>
+          <p class="todoSectionTitle-remaining"><%= todos.completed.count %>/<%= todos.count %> </p>
         </div>
         <ul>
         <% todos.each do |todo| %>
           <li class="TodoItem">
             <label class="TodoItem-container">
                 <%= form_with(url: "/todos/#{todo.id}", method: "PUT") do %>
-                <%= check_box_tag "completed", nil, todo.completed, class: "TodoItem-checkbox", onclick: "this.form.submit()" %>
+                <%= check_box_tag "completed", nil,
+                                  todo.completed,
+                                  class: "TodoItem-checkbox",
+                                  onclick: "this.form.submit()" %>
                 <% end %>
 
               <span class="<%= todo.completed ? "TodoItem-completestrike" : "" %>">
