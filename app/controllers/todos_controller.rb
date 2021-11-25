@@ -3,12 +3,13 @@ class TodosController < ApplicationController
   #skip_before_action :verify_authenticity_token
 
   def index
+    @todos = Todo.of_user(current_user)
     render "index"
   end
 
   def show
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     render "todo"
   end
 
@@ -28,7 +29,7 @@ class TodosController < ApplicationController
   def update
     id = params[:id]
     completed = params[:completed]
-    todo = Todo.find(id)
+    Todo.of_user(current_user).find(id)
     todo.completed = completed
     todo.save!
     redirect_to todos_path
@@ -37,7 +38,7 @@ class TodosController < ApplicationController
 
   def destroy
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     todo.destroy
     redirect_to todos_path
     #render plain: "Updated todo completed status to #{completed}"

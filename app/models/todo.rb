@@ -9,6 +9,9 @@ class Todo < ActiveRecord::Base
   def due_today?
     due_date == Date.today
   end
+  def self.of_user(user)
+    all.where(user_id: user.id)
+  end
 
   def self.completed
     all.where(completed: true)
