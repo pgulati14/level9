@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       #render plain: "You have entered the correct password !!"
+      session[:current_user_id] = user.id
+      redirect_to "/"
     elsif !user && !(params[:email].empty?)
       flash[:error] = " User does not exist!!!"
       redirect_to new_sessions_path
